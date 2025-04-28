@@ -3,20 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard de Consumos</title>
+  <title>Dashboard Consumo - Bootstrap</title>
+  
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Dashboard Consumo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
 
-  <div class="container py-4">
-    <h1 class="mb-4 text-center">Dashboard de Consumo</h1>
-
-    <!-- Aquí meteremos tarjetas y tablas -->
-
+   <!-- Agrega este botón donde desees en la página principal -->
+  <div class="text-center mt-5">
+    <a href="historial.html" class="btn btn-primary btn-lg">Ver Historial de Consumo</a>
   </div>
 
+
+  <!-- Main Content -->
+  <div class="container py-4">
+    <h1 class="mb-4 text-center">Panel de Consumo</h1>
+
+    <!-- Gráfico de Consumo -->
+    <div class="mt-5">
+      <h2 class="mb-4">Gráfico de Consumo</h2>
+      <canvas id="consumoChart" class="w-100" width="400" height="200"></canvas>
+    </div>
+    
+    <!-- Tarjetas del Dashboard -->
+    <div class="row" id="cards-container">
+      <!-- Tarjeta 1: Consumo de Agua -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card text-white bg-primary h-100">
+          <div class="card-body">
+            <h5 class="card-title">Consumo de Agua</h5>
+            <p class="card-text display-6">250 m³</p>
+            <p class="card-text">Último mes registrado</p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="#" class="btn btn-light">Ver detalles</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tarjeta 2: Consumo de Electricidad -->
+      <div class="col-md-4 mb-4">
+        <div class="card text-white bg-warning h-100">
+          <div class="card-body">
+            <h5 class="card-title">Consumo de Electricidad</h5>
+            <p class="card-text display-6">1200 kWh</p>
+            <p class="card-text">Último mes registrado</p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="#" class="btn btn-light">Ver detalles</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tarjeta 3: Consumo de Internet -->
+      <div class="col-md-4 mb-4">
+        <div class="card text-white bg-success h-100">
+          <div class="card-body">
+            <h5 class="card-title">Consumo de Internet</h5>
+            <p class="card-text display-6">350 GB</p>
+            <p class="card-text">Último mes registrado</p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="#" class="btn btn-light">Ver detalles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (opcional por ahora) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/script.js"></script>
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/js/scripts.js"></script>
+
+
 </body>
 </html>
