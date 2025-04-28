@@ -84,3 +84,21 @@ document.addEventListener('DOMContentLoaded', function() {
       configurarGraficosHistorial(); // Página de historial
     }
   });
+
+  
+  // Evento de envío del formulario
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
+
+    // Mostrar mensaje de éxito
+    document.getElementById('successMessage').style.display = 'block';
+
+    // Ocultar el mensaje de éxito después de 3 segundos y cerrar el modal
+    setTimeout(function() {
+      document.getElementById('successMessage').style.display = 'none';
+      // Cerrar el modal después de enviar
+      var modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+      modal.hide();
+    }, 3000); // 3 segundos de espera
+  });
+
