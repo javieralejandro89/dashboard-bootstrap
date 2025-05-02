@@ -52,44 +52,44 @@
     </div>
 
     <!-- Tarjetas del Dashboard -->
-    <div class="row" id="cards-container">
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-4" id="cards-container">
       <!-- Consumo de Agua -->
-      <div class="col-md-4 col-sm-6 mb-4">
+      <div class="col">
         <div class="card text-white bg-primary h-100">
           <div class="card-body">
             <h5 class="card-title">Consumo de Agua</h5>
             <p class="card-text display-6" id="consumo-agua">250 m³</p>
             <p class="card-text">Último mes registrado</p>
           </div>
-          <div class="card-footer text-center">
+          <div class="card-footer text-center bg-transparent border-0">
             <a href="#" class="btn btn-light">Ver detalles</a>
           </div>
         </div>
       </div>
 
       <!-- Consumo de Electricidad -->
-      <div class="col-md-4 mb-4">
+      <div class="col">
         <div class="card text-white bg-warning h-100">
           <div class="card-body">
             <h5 class="card-title">Consumo de Electricidad</h5>
             <p class="card-text display-6" id="consumo-electricidad">560 kWh</p>
             <p class="card-text">Último mes registrado</p>
           </div>
-          <div class="card-footer text-center">
+          <div class="card-footer text-center bg-transparent border-0">
             <a href="#" class="btn btn-light">Ver detalles</a>
           </div>
         </div>
       </div>
 
       <!-- Consumo de Internet -->
-      <div class="col-md-4 mb-4">
+      <div class="col">
         <div class="card text-white bg-success h-100">
           <div class="card-body">
             <h5 class="card-title">Consumo de Internet</h5>
             <p class="card-text display-6" id="consumo-internet">350 GB</p>
             <p class="card-text">Último mes registrado</p>
           </div>
-          <div class="card-footer text-center">
+          <div class="card-footer text-center bg-transparent border-0">
             <a href="#" class="btn btn-light">Ver detalles</a>
           </div>
         </div>
@@ -97,31 +97,22 @@
     </div>
   </div>
 
-  <!-- Resumen -->
-  <div class="container my-5">
-    <h2>Resumen Rápido</h2>
-    <div class="grid-resumen">
-      <div class="resumen-item bg-primary text-white p-3">Resumen 1</div>
-      <div class="resumen-item bg-success text-white p-3">Resumen 2</div>
-      <div class="resumen-item bg-warning text-white p-3">Resumen 3</div>
-    </div>
-  </div>
-
+  
   <!-- Formulario Actualizar Consumo -->
   <div class="container my-5">
-    <h3>Actualizar Consumo</h3>
-    <form id="formulario-consumo" class="row g-3">
-      <div class="col-md-4">
+    <h3 class="mb-4 text-center">Actualizar Consumo</h3>
+    <form id="formulario-consumo" class="row g-4">
+      <div class="col-12 col-md-4">
         <label for="agua" class="form-label">Consumo Agua (m³)</label>
-        <input type="number" class="form-control" id="agua" min="0" required>
+        <input type="number" class="form-control" id="agua" min="0" required placeholder="Ej. 250">
       </div>
-      <div class="col-md-4">
+      <div class="col-12 col-md-4">
         <label for="electricidad" class="form-label">Consumo Electricidad (kWh)</label>
-        <input type="number" class="form-control" id="electricidad" min="0" required>
+        <input type="number" class="form-control" id="electricidad" min="0" required placeholder="Eje. 560">
       </div>
-      <div class="col-md-4">
+      <div class="col-12 col-md-4">
         <label for="internet" class="form-label">Consumo Internet (GB)</label>
-        <input type="number" class="form-control" id="internet" min="0" required>
+        <input type="number" class="form-control" id="internet" min="0" required placeholder="Ej. 350">
       </div>
       <div class="col-12 mt-3">
         <button type="submit" class="btn btn-primary">Actualizar Dashboard</button>
@@ -138,29 +129,31 @@
 
   <!-- Modal de Contacto -->
   <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header bg-primary text-white">
           <h5 class="modal-title" id="contactModalLabel">Formulario de Contacto</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
         <div class="modal-body">
-          <form id="contactForm">
-            <div class="mb-3">
+          <form id="contactForm" class="row g-3">
+            <div class="col-md-6">
               <label for="nombre" class="form-label">Nombre:</label>
               <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
             </div>
-            <div class="mb-3">
+            <div class="col-md-6">
               <label for="email" class="form-label">Correo Electrónico:</label>
               <input type="email" class="form-control" id="email" name="email" required placeholder="Escribe tu correo">
             </div>
-            <div class="mb-3">
+            <div class="col-12">
               <label for="mensaje" class="form-label">Mensaje:</label>
               <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <div class="col-12 text-end"></div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
           </form>
-          <div id="successMessage" class="alert alert-success mt-3 d-none">
+          <div id="successMessage" class="alert alert-success mt-4 text-center" style="display: none;">
             ¡Datos enviados con éxito!
           </div>
         </div>
