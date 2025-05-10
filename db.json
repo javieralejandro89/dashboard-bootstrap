@@ -1,0 +1,46 @@
+{
+  "consumo": [
+    {
+      "id": "1",
+      "tipo": "Electricidad",
+      "valor": 520,
+      "unidad": "kWh",
+      "fecha": "2025-05-07"
+    },
+    {
+      "id": "2",
+      "tipo": "Internet",
+      "valor": 250,
+      "unidad": "GB",
+      "fecha": "2025-05-08"
+    },
+    {
+      "id": "3",
+      "tipo": "Internet",
+      "valor": 63,
+      "unidad": "GB",
+      "fecha": "2025-05-09"
+    },
+    {
+      "id": "4",
+      "tipo": "Electricidad",
+      "valor": 525,
+      "unidad": "kWh",
+      "fecha": "2025-05-08"
+    },
+    {
+      "id": "5",
+      "tipo": "Agua",
+      "valor": 153,
+      "unidad": "m³",
+      "fecha": "2025-05-08"
+    },
+    {
+      "id": 6,
+      "tipo": "Agua",
+      "valor": 120,
+      "unidad": "m³",
+      "fecha": "2025-05-09"
+    }
+  ]
+}

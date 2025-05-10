@@ -157,3 +157,10 @@ canvas {
   opacity: 1;
 }
 
+/* Estilo para resaltar la fila en azul */
+.table-actualizado {
+  background-color: #1e029b; /* Azul claro */
+  transition: background-color 1s ease;
+}
+
+
